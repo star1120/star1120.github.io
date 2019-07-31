@@ -1,0 +1,161 @@
+// Setting parameters by fungleo
+
+$BaseC:$c55;
+$base:750;
+// reset by fungleo date 2015.08.27
+@charset "UTF-8";
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,table,th,td,menu{font-family: "微软雅黑"; font-size: 13px; -moz-user-select: none;margin:0;padding:0;resize: none;}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol,menu{list-style:none;text-align: left;}
+fieldset,img{border:none}
+img,object,select,input,textarea,button{vertical-align:middle;box-sizing:content-box;}
+input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr,button,u,s,del{
+  font-style:normal;text-decoration: none;
+  -webkit-appearance: none;
+}
+article,aside,footer,header,hgroup,nav,section,figure,figcaption {display: block;}
+code, kbd, pre, samp, tt { font-family: Consolas,"Courier New", Courier, monospace;}
+address, cite, dfn, em, var,i {font-style: normal;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content:"";content: none;}
+a {
+  text-decoration:none;cursor: pointer;color: $c55;
+  &:link,&:visited, &:active{-webkit-tap-highlight-color: transparent;}
+  &:hover{outline:none;color: $zhu;}
+  &,* {cursor: pointer;}
+}
+input[type="text"] {
+  -webkit-appearance: none;
+}
+input{
+  outline: none;
+  border:none;
+  padding: 0 5px;
+}
+input:focus,select:focus{
+  outline:none;
+}
+input[type=button]{
+  padding: 1px 6px
+}
+select{
+  appearance: none;/*清除select下拉框默认样式*/
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand { display: none; }
+abbr[title], acronym[title] {border-bottom: 1px dotted;cursor: help;}
+
+// 取消chrome下input和textarea的聚焦边框：
+input,button,select,textarea{outline:none}
+textarea{resize:none} //取消chrome下textarea可拖动放大：
+
+//设置输入框placeholder样式
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #a2a2a2;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #a2a2a2;
+  opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #a2a2a2;
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #a2a2a2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #a2a2a2;
+}
+
+//生成默认的padding 和margin 以及padding/margin(top,bottom,left,right)的5-50px中5的倍数的class
+$box-list: (pd, padding), (pdt, padding-top), (pdb, padding-bottom), (pdl, padding-left), (pdr, padding-right), (mg, margin), (mgt, margin-top), (mgb, margin-bottom), (mgl, margin-left), (mgr, margin-right);
+@each $box, $name in $box-list {
+  @for $i from 5 through 100 {
+    @if ($i % 5 ==0) {
+      .#{$box}-#{$i} {
+        #{$name}: ($i/$base)+rem;
+      }
+    }
+  }
+}
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    font: 0/0 a;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.cl {
+  @extend %clearfix
+}
+// 一行文字标题超出显示省略号
+@mixin oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.put-submit{
+  height: 1rem;
+  background: $cfe;
+  margin: 0.3rem;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.36rem;
+  color:$cff;
+  border-radius: 0.08rem;
+}
+//checkbox
+.m-switch {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 25px;
+  left: 0;
+  border: 1px solid #d2d2d2;
+  border-radius: 16px;
+  background-color: $cff;
+  z-index: 2;
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    border-radius: 15px;
+    transition: transform .3s;
+  }
+  &:after {
+    width: 24px;
+    background-color:$cff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  &:before {
+    width: 45px;
+    background-color: #f5f5f5;
+  }
+  &:checked {
+    border-color: $cfe;
+    background-color: $cfe;
+    &:before {
+      transform: scale(0);
+    }
+    &:after {
+      transform: translateX(20px);
+    }
+  }
+}
+.root_directory{position:fixed;right:1rem;top:5rem;height:.84rem;width:.84rem;border-radius:50%;text-align:center;font-size:0;z-index:192;
+  img{
+    width: 100%;
+  }
+}

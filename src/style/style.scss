@@ -1,0 +1,17 @@
+// $static:"/admin/static";
+//$static:"/static";
+// base
+@import "base/_color"; // 定义颜色
+@import "base/mixin";
+@import "base/ui";
+@import "base/_reset"; // 初始化样式
+@import "base/meta"; // 初始化样式
+@import "base/_base"; // 公共样式
+// style
+@import "scss/index";
+@import "scss/header";
+@import "scss/left";
+@import "scss/home";
+@import "scss/prescription"; // 处方
+@import "scss/login"; // 处方
+

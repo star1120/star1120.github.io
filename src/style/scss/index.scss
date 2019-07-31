@@ -1,0 +1,36 @@
+// 顶部
+#header {
+  width: 100%;
+  height: 50px;
+  color: $cff;
+  overflow:hidden;
+}
+// 中部
+.layout{
+  width:100%;
+  height: calc(100vh - 50px);
+  #nav{
+    height: calc(100vh - 50px);
+  }
+  .layoutRight{
+    background-color:#ebeff0;
+    #contain{
+      margin:15px;
+      overflow-y:auto;
+      padding: 20px 15px;;
+      padding-bottom: 0;
+      background-color: $cff;
+      height: calc(100vh - 100px);
+    }
+  }
+}
+.topTitle {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  height: 45px;
+  .rightTitle {
+    float: left;
+    font-weight: normal;
+    font-size: 24px;
+  }
+}

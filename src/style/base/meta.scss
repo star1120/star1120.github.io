@@ -1,0 +1,203 @@
+    /* 响应式布局 媒体查询*/
+    /* PC端
+        1024  1280  1366  1440  1680  1920  */
+    @media only screen and (max-width: 11920px) {
+        // 处方响应式 start
+            .prescription_dialog{
+                width: calc(100% - 58px);
+            }
+            .meta_title{
+                width: 45%;
+            }
+            .meta_textarea{
+                width: calc(100% - 200px);
+            }
+            .meta_select{
+                // width: 180px;
+            }
+            .meta_input_select{
+                width: 360px;
+            }
+            .meta_i_select{
+                width: 100px;
+            }
+            .meta_item{
+                width: 16%;
+                margin: 8px 0.3%;
+                padding: 0.5%;
+            }
+            .meta_s_list{
+                width: 400px;
+            }
+            .el-button+.el-button{
+                margin-left: 10px;
+            }
+            .meta_over_btn{
+                width: 80px;
+                margin: 8px auto 0 auto;
+            }
+            .gelun_dialog_left{
+                border-right: solid 1px #d8d8d8;
+            }
+
+            .gelun_dialog_right{
+                .g_increase{
+                    height: 120px;
+                    .g_add,.g_reduce{
+                        height: 60px;
+                    }
+                }
+            }
+            // 处方响应式 end
+
+            // 我的患者
+            .patient_table{
+              height: calc(100vh - 220px);
+            }
+
+            // 登录
+            .login{
+                width: 420px;
+            }
+    }
+
+    @media only screen and (max-width: 1680px) {
+        // 处方响应式 start
+            // .meta_item{
+            //     width: 23%;
+            //     margin: 8px 0.5%;
+            //     padding: 0.5%;
+            // }
+            .meta_s_list{
+                width: 400px;
+            }
+            // 处方响应式 end
+    }
+
+    @media only screen and (max-width: 1440px) {
+        // 处方响应式 start
+            .meta_s_list{
+                width: 380px;
+            }
+            // 处方响应式 end
+    }
+
+    @media only screen and (max-width: 1366px) {
+        // 处方响应式 start
+            .meta_item{
+                width: 23%;
+                margin: 8px 0.5%;
+                padding: 0.5%;
+            }
+            .meta_s_list{
+                width: 360px;
+            }
+            // 处方响应式 end
+    }
+    @media only screen and (max-width: 1200px) {
+        // 处方响应式 start
+            .meta_s_list{
+                width: 100%;
+            }
+            // 处方响应式 end
+    }
+
+    @media only screen and (max-width: 1024px){
+        // 处方响应式 start
+            .prescription_dialog{
+                width: 100%;
+            }
+            .meta_title{
+                width: 100%;
+            }
+            .s_textarea{
+                width: 50%; 
+            }
+            .meta_item{
+                width: 31.33%;
+                margin: 8px 0.5%;
+                padding: 0.5%;
+            }
+            .meta_s_list{
+                padding-bottom: 6vh;
+            }
+            // 处方响应式 end
+
+            // 患者列表 start
+            .layoutRight{
+                width: calc(100% - 58px);
+            }
+
+            // 患者列表 end
+    }
+
+    @media only screen and (max-width: 768px) {
+        // 处方响应式 start
+            .meta_textarea{
+                width: 100%;
+                margin-top: 10px;
+            }
+            .meta_zzbtn{
+                margin-top: 10px;
+            }
+            .meta_select{
+                width: 100%;
+                margin-top: 10px;
+                // margin-left: 100px;
+            }
+            .meta_bot_btn{
+                width: 100%;
+                margin: 10px auto;
+            }
+            .gelun_dialog_left{
+                width: 100%;
+                border:none;
+                border-bottom: solid 1px #d8d8d8;
+                padding-bottom: 10px;
+            }
+            .gelun_dialog_right{
+                width: 100%;
+                .g_increase{
+                    height: 160px;
+                    .g_add,.g_reduce{
+                        height: 80px;
+                    }
+                }
+            }
+            // 处方响应式 end
+    }
+
+    @media only screen and (max-width: 640px) {
+        // 处方响应式 start
+            .meta_item{
+                width: 96%;
+                margin: 8px 1%;
+                padding: 1%;
+            }
+            // 处方响应式 end
+    }
+
+    @media only screen and (max-width: 480px) {
+            // 处方响应式 start
+            .meta_input_select{
+                width: 100%;
+            }
+            .meta_i_select{
+                width: 30%;
+            }
+            .meta_select{
+                margin-left: 0px;
+            }
+            // 处方响应式 end
+
+            // 登录界面
+            .login{
+                width: 86%;
+            }
+
+    }
+
+    @media only screen and (max-width: 320px) {
+
+   // 处方响应式 start
+    }

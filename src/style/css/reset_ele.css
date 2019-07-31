@@ -1,0 +1,113 @@
+/*// element 重置样式*/
+
+/*el-tree*/
+.el-tree-node__content{
+  height: 30px;
+  line-height: 30px;
+}
+
+/*el-checkbox 多选框*/
+.el-checkbox__label{
+	font-size: 12px;
+}
+.el-checkbox__label{
+  padding-left: 5px;
+}
+.el-checkbox+.el-checkbox{
+  padding-left: 0;
+}
+.el-checkbox{
+  margin-right: 25px;
+}
+
+
+/*上传附件图片*/
+.el-upload--picture-card{
+  width: 70px;
+  height: 70px;
+  line-height: 68px;
+}
+.el-upload--picture-card i{
+  line-height: 65px;
+}
+.el-upload-list--picture-card .el-upload-list__item{
+  width: 70px;
+  height: 70px;
+}
+
+
+/*table 表格*/
+.el-table td, .el-table th{
+  padding: 5px 0;
+}
+
+
+/*弹窗样式*/
+.el-dialog__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  padding: 0 20px;
+  background-color: #efefef;
+}
+.el-dialog__headerbtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background: 0 0;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.el-dialog__body{
+  padding: 20px 20px 0 20px;
+}
+
+/*分页*/
+.el-pagination{
+  padding:8px;
+}
+.el-pager li,.el-pagination button.disabled,.el-pagination .btn-next, .el-pagination .btn-prev{
+  background: transparent;
+}
+.el-pager li.active{
+  color:#fff;
+}
+
+
+/*el-input  el-select*/
+.el-input__inner{
+  padding: 0 5px;
+  color:#aaaaaa;
+  border: 1px solid #e6e6e6;
+}
+.el-input__inner,.el-select-dropdown__item{
+  font-size: 13px;
+}
+.el-select .el-input__inner:focus{
+  border-color:$b01;
+}
+.el-select:hover .el-input__inner{
+  border-color:#c9c9c9;
+  border-color:$c21;
+}
+.el-select-dropdown__item.selected{
+  color: #42a7eb;
+}
+.el-select-dropdown__item.selected{
+  font-weight: normal;
+  color: $cff;
+  border-color:$c21;
+}
+
+/*提示弹窗*/
+.el-message-box{
+  position: fixed;
+  width: 300px;
+  left: calc(50% - 150px);
+  top: 30%;
+}
+
